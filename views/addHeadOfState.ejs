@@ -1,0 +1,22 @@
+<h1>Add Head Of State</h1>
+
+<!-- trying to check for variable errors, sees it undefined or not undefined -->
+<% if(errors != undefined){ %>
+  <ul>
+      <% errors.forEach((error) => { %>
+          <li>
+              <%= error.msg %>
+          </li><% }) %>
+  </ul>
+<% } %>
+
+<!-- POST method is standard -->
+<form action="/addHeadOfState" method="POST">
+  <label>Country Code</label>
+  <input type="text" name="_id"><br>
+  <label>Head Of State</label>
+  <input type="text" name="headOfState"><br>
+  <input type="submit" value="Add">
+</form>
+
+<a href="./">Home</a>

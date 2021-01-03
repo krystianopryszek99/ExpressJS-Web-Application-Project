@@ -1,0 +1,32 @@
+<table style="border: 2px ridge black;">
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <h1>Countries</h1>
+
+    <!-- button for adding details to the country -->
+    <a href="/addCountry"><button>Add Country</button></a>
+
+    <br><br> 
+
+    <tr style="border: 2px ridge;">
+        <th style="border: 2px ridge black;">Country Code</th>
+        <th style="border: 2px ridge black;">Country Name</th>
+        <th style="border: 2px ridge black;">Country Details</th>
+        <th style="border: 2px ridge black;">Action</th>
+    </tr>
+    <% countries.forEach((country) => { %>
+    <tr>
+        <td style="border: 2px ridge black;"><%= country.co_code %></td>
+        <td style="border: 2px ridge black;"><%= country.co_name %></td>
+        <td style="border: 2px ridge black;"><%= country.co_details %></td>
+        <td style="border: 2px ridge black;"><a href="/updateCountry/<%= country.co_code %>">Update</a></td>
+        <td style="border: 2px ridge black;"><a href="/deleteCountry/<%= country.co_code %>">Delete</a></td>
+    </tr>
+    <% }) %>
+</table>
+
+<br>
+
+<!-- takes you to home page -->
+<a href="./">Home</a>
